@@ -72,24 +72,144 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!--/.header-->
 <div id="#top"></div>
-<section id="home">
-  <div class="banner-container"> 
-    <img src="images/banner1.webp" alt="banner" />
-    <div class="container banner-content">
-      <div class="hero-text animated fadeInDownBig">
-        <h1 class="responsive-headline" style="font-size: 40px;">Welcome to Revive Mind Therapy</h1>
-        <a href="#basics" class="arrow-link"> 
-          <i class="fa fa-arrow-circle-down fa-2x"></i> 
-        </a> 
-        <!-- Book Appointment Button -->
-        <a href="https://www.jane.app" target="_blank" class="btn btn-primary btn-lg book-appointment">
-          Book Appointment
-        </a>
+<section id="home" class="hero-section">
+  <!-- Animated Background Elements -->
+  <div class="stars"></div>
+
+  <div class="container text-center">
+    <div class="hero-text fade-in">
+      <h1 class="display-4 fw-bold">
+        Welcome to <span class="highlight animate-char">Revive Mind Therapy</span>
+      </h1>
+      <p class="lead animate-text">Your journey to mental well-being begins here.</p>
+
+      <!-- Call to Action Buttons -->
+      <div class="btn-container">
+        <a href="https://www.jane.app" target="_blank" class="btn book-appointment pulse">Book Appointment</a>
+        
       </div>
     </div>
   </div>
 </section>
 
+<style>
+  /* Gradient Background */
+  .hero-section {
+    background: linear-gradient(135deg, #e0f7ff, #b3e5fc);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Floating Stars */
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .stars::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.3;
+    animation: twinkle 3s infinite alternate;
+  }
+
+  @keyframes twinkle {
+    from { opacity: 0.2; }
+    to { opacity: 0.5; }
+  }
+
+  /* Buttons */
+  .btn-container {
+    margin-top: 20px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .book-appointment {
+    background: linear-gradient(45deg, #007BFF, #00C6FF);
+    color: white;
+    border: none;
+    animation: pulse 2s infinite;
+  }
+
+  .explore-more {
+    background: linear-gradient(45deg, #FF4081, #FF80AB);
+    color: white;
+    border: none;
+    animation: floatBtn 3s infinite;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+
+  /* Button Animations */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes floatBtn {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+  /* Animated Text */
+  .animate-text {
+    animation: textGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes textGlow {
+    from { text-shadow: 0 0 10px rgba(0, 122, 255, 0.3); }
+    to { text-shadow: 0 0 20px rgba(0, 122, 255, 0.6); }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const starsContainer = document.querySelector(".stars-container");
+
+    function createStar() {
+      const star = document.createElement("div");
+      star.className = "star";
+      star.innerHTML = "✦"; // Unicode star character
+      const size = Math.random() * 10 + 5;
+      star.style.fontSize = `${size}px`;
+      star.style.left = `${Math.random() * 100}vw`;
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.animationDuration = `${Math.random() * 5 + 2}s`;
+      star.style.animationDelay = `${Math.random() * 3}s`;
+      starsContainer.appendChild(star);
+
+      setTimeout(() => {
+        star.remove();
+      }, (Math.random() * 5 + 2) * 1000);
+    }
+
+    setInterval(createStar, 300);
+  });
+</script>
 <section id="services" class="page-section colord">
   <div class="container">
     <div class="heading text-center"> 
@@ -143,28 +263,159 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
   <!--/.container--> 
-<section id="aboutUs">
+<section id="aboutUs" class="py-5 bg-dark text-light">
   <div class="container">
-    <div class="heading text-center"> 
-      <!-- Heading -->
-      <h2>About Us</h2>
-      <p>At Revive Mind Therapy, we are passionate about guiding individuals toward mental well-being, self-discovery, and emotional healing.</p>
-      <p class="text-muted">At Revive Mind Therapy, we offer specialized mental health support tailored to your needs.</p>
- <a href="https://www.jane.app" target="_blank" class="btn btn-primary btn-lg book-appointment">
+    <div class="heading text-center fade-in">
+      <h2 class="fw-bold text-gradient">Who We Are</h2>
+      <p class="lead stylish-text">Empowering your mind. Elevating your well-being.</p>
+      <p class="text-muted">At Revive , we believe in transforming lives through expert therapy, compassionate care, and a holistic approach to mental wellness.</p>
+      
+      <!-- Book Appointment Button -->
+      <a href="https://www.jane.app" target="_blank" class="btn book-appointment">
         Book Appointment
       </a>
     </div>
 
-    <div class="row feature design">
-      <div class="six columns right">
-        <h3>Holistic and Compassionate Care</h3>
-        <p>At Revive Mind Therapy, we believe in a client-centered approach that nurtures mental and emotional well-being. Our experienced therapists provide personalized support, helping you overcome anxiety, stress, and emotional struggles.</p>
-        <p>We focus on empowering individuals to build resilience, find clarity, and restore balance in their lives. Our therapy sessions are designed to foster self-awareness, growth, and long-lasting positive change.</p>
+    <div class="row align-items-center mt-5">
+      <div class="col-lg-6 text-center text-lg-start slide-left">
+        <h3 class="fw-bold text-info animated-title">Holistic & Compassionate Care</h3>
+        <p class="fs-5 stylish-text">We take a client-centered approach, guiding individuals through their mental health journey with **empathy, expertise, and tailored solutions**.</p>
+        <p class="fs-5 stylish-text">Our therapy sessions are crafted to foster **resilience, clarity, and personal growth**, empowering you to regain balance and inner peace.</p>
       </div>
-      <div class="six columns feature-media left"> <img src="images/feature-img-1.png" alt=""> </div>
+      
+      <div class="col-lg-6 text-center slide-right">
+        <img src="images/feature-img-1.png" alt="Therapy Session" class="img-fluid rounded shadow-lg">
+      </div>
     </div>
   </div>
 </section>
+
+<!-- CSS for Styling & Animations -->
+<style>
+  /* Stylish Font */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  /* Section Styles */
+  #aboutUs {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Gradient Heading */
+  .text-gradient {
+    background: linear-gradient(45deg, #ffcc00, #ff5733);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 2.5rem;
+  }
+
+  /* Highlighted Text */
+  .highlight-text {
+    color: #ffcc00;
+    font-weight: bold;
+  }
+
+  /* Animated Heading */
+  .animated-title {
+    font-size: 2rem;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
+  }
+
+  /* Text Style */
+  .stylish-text {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #ddd;
+  }
+
+  /* Book Appointment Button */
+  .book-appointment {
+    background-color: #ffcc00; /* Yellow */
+    color: #1e3a8a; /* Dark Blue */
+    font-weight: bold;
+    padding: 14px 28px;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    animation: bounce 1.5s infinite alternate;
+  }
+
+  .book-appointment:hover {
+    background-color: #1e3a8a; /* Dark Blue */
+    color: #ffcc00; /* Yellow */
+    border-color: #1e3a8a;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  .slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideLeft 1.2s ease-out forwards;
+  }
+
+  .slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideRight 1.2s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Glow Effect */
+  @keyframes glow {
+    from {
+      text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+    }
+    to {
+      text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  /* Button Bounce */
+  @keyframes bounce {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+</style>
 
 <section id="work" class="page-section page">
   <div class="container text-center">
@@ -543,7 +794,7 @@ section {
   font-weight: bold;
 }
 .logo-img {
-  height: 100px; /* Adjust as needed */
+  height: 73px; /* Adjust as needed */
   width: auto;
 }
 
