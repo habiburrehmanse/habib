@@ -73,54 +73,74 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--/.header-->
 <div id="#top"></div>
 <section id="home">
-  <div class="banner-container"> <img src="images/banner1.webp" alt="banner" />
+  <div class="banner-container"> 
+    <img src="images/banner1.webp" alt="banner" />
     <div class="container banner-content">
       <div class="hero-text animated fadeInDownBig">
         <h1 class="responsive-headline" style="font-size: 40px;">Welcome to Revive Mind Therapy</h1>
-        <a href="#basics" class="arrow-link"> <i class="fa fa-arrow-circle-down fa-2x"></i> </a> 
-        <!--<p>Your journey to mental well-being starts here.</p>--> 
+        <a href="#basics" class="arrow-link"> 
+          <i class="fa fa-arrow-circle-down fa-2x"></i> 
+        </a> 
+        <!-- Book Appointment Button -->
+        <a href="https://www.jane.app" target="_blank" class="btn btn-primary btn-lg book-appointment">
+          Book Appointment
+        </a>
       </div>
     </div>
   </div>
 </section>
+
 <section id="services" class="page-section colord">
   <div class="container">
     <div class="heading text-center"> 
-      <!-- Heading -->
       <h2>Our Services</h2>
       <p>At Revive Mind Therapy, we provide expert counseling and therapy services to support your mental well-being and personal growth.</p>
+      <!-- Book Appointment Button -->
+     
     </div>
     <div class="row"> 
-      <!-- item -->
-      <div class="col-md-3 text-center c1"> <i class="fa fa-heartbeat fa-2x circle"></i>
+      <div class="col-md-3 text-center c1"> 
+        <i class="fa fa-heartbeat fa-2x circle"></i>
         <h3><span class="id-color">Stress Management</span></h3>
         <p>We help you manage stress effectively through mindfulness techniques, therapy sessions, and relaxation practices.</p>
       </div>
-      <!-- end: --> 
-      
-      <!-- item -->
-      <div class="col-md-3 text-center c2"> <i class="fa fa-comments fa-2x circle"></i>
+      <div class="col-md-3 text-center c2"> 
+        <i class="fa fa-comments fa-2x circle"></i>
         <h3><span class="id-color">Counseling Sessions</span></h3>
         <p>Personalized therapy sessions to address anxiety, depression, relationship challenges, and overall mental health improvement.</p>
       </div>
-      <!-- end: --> 
-      
-      <!-- item -->
-      <div class="col-md-3 text-center c1"> <i class="fa fa-venus fa-2x circle"></i>
+      <div class="col-md-3 text-center c1"> 
+        <i class="fa fa-venus fa-2x circle"></i>
         <h3><span class="id-color">Women's Mental Health</span></h3>
         <p>Specialized support for women's mental well-being, including postpartum depression, self-care, and empowerment coaching.</p>
       </div>
-      <!-- end: --> 
-      
-      <!-- item -->
-      <div class="col-md-3 text-center c2"> <i class="fa fa-child fa-2x circle"></i>
+      <div class="col-md-3 text-center c2"> 
+        <i class="fa fa-child fa-2x circle"></i>
         <h3><span class="id-color">Child & Teen Therapy</span></h3>
         <p>Providing guidance and support for children and teenagers dealing with emotional, behavioral, and academic challenges.</p>
       </div>
-      <!-- end:--> 
     </div>
   </div>
 </section>
+
+<style>
+  .book-appointment {
+    background-color: #ff4081; 
+    color: white; 
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .book-appointment:hover {
+    background-color: #d93670;
+  }
+</style>
+
 
   <!--/.container--> 
 <section id="aboutUs">
@@ -129,7 +149,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <!-- Heading -->
       <h2>About Us</h2>
       <p>At Revive Mind Therapy, we are passionate about guiding individuals toward mental well-being, self-discovery, and emotional healing.</p>
+      <p class="text-muted">At Revive Mind Therapy, we offer specialized mental health support tailored to your needs.</p>
+ <a href="https://www.jane.app" target="_blank" class="btn btn-primary btn-lg book-appointment">
+        Book Appointment
+      </a>
     </div>
+
     <div class="row feature design">
       <div class="six columns right">
         <h3>Holistic and Compassionate Care</h3>
@@ -212,6 +237,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="heading text-center mb-5">
       <h2 class="fw-bold text-primary">How We Can Help</h2>
       <p class="text-muted">At Revive Mind Therapy, we offer specialized mental health support tailored to your needs.</p>
+ <a href="https://www.jane.app" target="_blank" class="btn btn-primary btn-lg book-appointment">
+        Book Appointment
+      </a>
     </div>
     <div class="row text-center">
       <div class="col-md-3 col-sm-6 mb-4">
@@ -547,7 +575,27 @@ section {
 .navbar-light .navbar-toggler-icon {
   filter: invert(1); /* Makes the toggler icon white */
 }
+ .book-appointment {
+    background-color: #1e3a8a; /* Dark navy blue */
+    color: white;
+    font-weight: bold;
+    padding: 14px 28px;
+    border: 2px solid #ffcc00; /* Yellow border */
+    border-radius: 8px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
 
+  .book-appointment:hover {
+    background-color: #ffcc00; /* Yellow on hover */
+    color: #1e3a8a; /* Dark blue text */
+    border-color: #1e3a8a; /* Dark blue border */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+  }
 
 </style>
 <!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
