@@ -34,33 +34,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css" />
 <!-- Font Awesome -->
-<link href="font/css/font-awesome.min.css" rel="stylesheet">
+<link href="font/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+
 <header class="header">
   <div class="container">
-    <nav class="navbar navbar-inverse" role="navigation">
-      <div class="navbar-header">
-        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a href="#" class="navbar-brand scroll-top logo  animated bounceInLeft"><b><i></i>Doctor</b></a> </div>
-      <!--/.navbar-header-->
-      <div id="main-nav" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav" id="mainNav">
-          <li class="active" id="firstLink"><a href="#home" class="scroll-link">Home</a></li>
-          <li><a href="#services" class="scroll-link">Services</a></li>
-          <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
-          <li><a href="#work" class="scroll-link">Portfolio</a></li>
-          <li><a href="#team" class="scroll-link">Team</a></li>
-          <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand logo d-flex align-items-center">
+          <img src="images/logo.webp" alt="Revive Mind Therapy Logo" class="logo-img me-2">\
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" 
+          aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#aboutUs">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#work">Our Offerings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicesnew">Healing & Growth</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contactUs">Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <!--/.navbar-collapse--> 
     </nav>
-    <!--/.navbar--> 
   </div>
-  <!--/.container--> 
 </header>
+
+
 <!--/.header-->
 <div id="#top"></div>
 <section id="home">
@@ -197,109 +206,350 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   </div>
 </section>
 
-<section id="services" class="page-section">
+<!-- Services Section -->
+<section id="servicesnew" class="page-section py-5 bg-light">
   <div class="container">
-    <div class="heading text-center"> 
-      <!-- Heading -->
-      <h2>Our Services</h2>
-      <p>At Revive Mind Therapy, we provide expert mental health support and therapy services to help individuals achieve emotional well-being.</p>
+    <div class="heading text-center mb-5">
+      <h2 class="fw-bold text-primary">How We Can Help</h2>
+      <p class="text-muted">At Revive Mind Therapy, we offer specialized mental health support tailored to your needs.</p>
     </div>
-    <div class="team-content">
-      <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-6"> 
-          <div class="team-member pDark"> 
-            <div class="member-img"> 
-              <img class="img-responsive" src="images/service-1.jpg" alt=""> </div>
-            <h4>Individual Therapy</h4>
-            <span class="pos">Personalized one-on-one counseling sessions.</span> </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-6"> 
-          <div class="team-member pDark"> 
-            <div class="member-img"> 
-              <img class="img-responsive" src="images/service-2.jpg" alt=""> </div>
-            <h4>Group Therapy</h4>
-            <span class="pos">Supportive therapy in a group setting.</span> </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-6"> 
-          <div class="team-member pDark"> 
-            <div class="member-img"> 
-              <img class="img-responsive" src="images/service-3.jpg" alt=""> </div>
-            <h4>Stress Management</h4>
-            <span class="pos">Learn techniques to cope with stress effectively.</span> </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-6"> 
-          <div class="team-member pDark"> 
-            <div class="member-img"> 
-              <img class="img-responsive" src="images/service-4.jpg" alt=""> </div>
-            <h4>Meditation & Mindfulness</h4>
-            <span class="pos">Guided practices for inner peace.</span> </div>
+    <div class="row text-center">
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="service-box p-4 shadow-sm rounded bg-white animate-fade">
+          <i class="fas fa-user-md fa-3x text-primary mb-3"></i>
+          <h4 class="fw-bold">Individual Therapy</h4>
+          <p class="text-muted">Personalized one-on-one counseling sessions.</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<section id="contactUs" class="contact-parlex">
-  <div class="parlex-back">
-    <div class="container">
-      <div class="row">
-        <div class="heading text-center"> 
-          <!-- Heading -->
-          <h2>Contact Us</h2>
-          <p>Reach out to us for professional mental health support and guidance.</p>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="service-box p-4 shadow-sm rounded bg-white animate-fade delay-1">
+          <i class="fas fa-users fa-3x text-success mb-3"></i>
+          <h4 class="fw-bold">Group Therapy</h4>
+          <p class="text-muted">Supportive therapy in a group setting.</p>
         </div>
       </div>
-      <div class="row mrgn30">
-        <form method="post" action="" id="contactfrm" role="form">
-          <div class="col-sm-4">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)">
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address">
-              <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <label for="comments">Message</label>
-              <textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
-            </div>
-            <div class="result"></div>
-          </div>
-        </form>
-        <div class="col-sm-4">
-          <h4>Address:</h4>
-          <address>
-          Revive Mind Therapy<br>
-          123 Wellness St., Suite 400<br>
-          Mental Health City, USA <br>
-          </address>
-          <h4>Phone:</h4>
-          <address>
-          (123) 456-7890<br>
-          </address>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="service-box p-4 shadow-sm rounded bg-white animate-fade delay-2">
+          <i class="fas fa-brain fa-3x text-warning mb-3"></i>
+          <h4 class="fw-bold">Stress Management</h4>
+          <p class="text-muted">Learn techniques to cope with stress effectively.</p>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="social text-center"> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="service-box p-4 shadow-sm rounded bg-white animate-fade delay-3">
+          <i class="fas fa-spa fa-3x text-danger mb-3"></i>
+          <h4 class="fw-bold">Mindfulness & Meditation</h4>
+          <p class="text-muted">Guided practices for inner peace.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!--/.page-section-->
-<section class="copyright">
+<!-- Contact Section -->
+<section id="contactUs" class="contact-section py-5 bg-white">
   <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title fw-bold text-primary">Get in Touch</h2>
+      <p class="text-muted">Connect with us for professional guidance and mental well-being support.</p>
+    </div>
     <div class="row">
-      <div class="col-sm-12 text-center"> Copyright 2014 | All Rights Reserved -- Template by <a href="http://webThemez.com">WebThemez.com</a> </div>
+      <div class="col-lg-6">
+        <form method="post" action="" id="contactForm" role="form" class="contact-form p-4 shadow-sm rounded bg-light">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="comments" class="form-label">Message</label>
+            <textarea name="comment" class="form-control" id="comments" rows="4" placeholder="Enter your message"></textarea>
+          </div>
+          <button name="submit" type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+        <div class="contact-info p-4 shadow-sm rounded bg-light">
+          <h4 class="fw-bold">Our Office</h4>
+          <p><strong>Address:</strong> 123 Wellness St., Suite 400, Mental Health City, USA</p>
+          <p><strong>Phone:</strong> (123) 456-7890</p>
+          <div class="social-links mt-3">
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- / .row --> 
   </div>
 </section>
-<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
 
+<!-- Footer -->
+<section class="copyright bg-dark text-light py-3">
+  <div class="container text-center">
+    <p class="mb-0">© 2025 Revive Mind Therapy | Designed with ❤️</p>
+  </div>
+</section>
+
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".nav-link");
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      document.querySelector(targetId).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  });
+});
+window.addEventListener("scroll", function () {
+  let scrollPos = window.scrollY + 100; // Adjust offset for better detection
+  let links = document.querySelectorAll(".nav-link");
+
+  links.forEach(link => {
+    let section = document.querySelector(link.getAttribute("href"));
+    if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+      links.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    }
+  });
+});
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let navbarHeight = document.querySelector(".navbar").offsetHeight;
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      let targetId = this.getAttribute("href").substring(1);
+      let targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - navbarHeight,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
+
+
+</script>
+
+<!-- CSS Styles -->
+<style>
+.navbar-nav .nav-item {
+  font-size: 18px; /* Increase text size */
+  font-weight: 600; /* Make text bold */
+  margin-right: 20px; /* Add spacing between items */
+}
+
+.navbar-nav .nav-link {
+  padding: 12px 18px; /* Increase clickable area */
+  font-size: 18px; /* Bigger font size */
+  text-transform: uppercase; /* Optional: Make text uppercase */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1); /* Light hover effect */
+  border-radius: 8px;
+}
+.navbar-nav .active a {
+  color: #007bff !important; /* Highlight active menu */
+  background-color: rgba(0, 123, 255, 0.1); /* Subtle background */
+  border-radius: 8px;
+}
+
+  .contact-section {
+    background-color: #f8f9fa;
+  }
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  .contact-form, .contact-info {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .contact-info h4 {
+    font-weight: bold;
+  }
+  .social-links {
+    display: flex;
+    gap: 10px;
+  }
+  .social-icon {
+    font-size: 1.5rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  .social-icon:hover {
+    color: #0056b3;
+  }
+.navbar-nav .nav-item {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link {
+  color: #333 !important;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: #007bff;
+  color: #fff !important;
+}
+.navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Service Box Styling */
+.service-box {
+  transition: all 0.3s ease-in-out;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Icons */
+.social-links a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade {
+  animation: fadeInUp 0.8s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+section {
+  scroll-margin-top: 80px; /* Adjust based on navbar height */
+}
+
+.logo-text {
+  font-size: 26px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight {
+  color: #ff4d79; /* A bold contrast for emphasis */
+  font-weight: bold;
+}
+.logo-img {
+  height: 100px; /* Adjust as needed */
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    height: 35px;
+  }
+  .logo-text {
+    font-size: 1rem;
+  }
+}
+.navbar {
+  background-color: #3d3947 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white !important; /* Ensures text remains visible */
+}
+
+.navbar-light .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-light .navbar-toggler-icon {
+  filter: invert(1); /* Makes the toggler icon white */
+}
+
+
+</style>
 <!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
 <script src="js/modernizr-latest.js"></script> 
 <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script> 
@@ -311,5 +561,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="js/waypoints.js"></script> 
 <script src="js/custom.js" type="text/javascript"></script> 
 <script src="js/owl-carousel/owl.carousel.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
