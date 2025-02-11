@@ -73,7 +73,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--/.header-->
 <div id="#top"></div>
 <section id="home" class="hero-section">
-  <!-- Animated Background Elements -->
+  <!-- Background Elements -->
+  <div class="moon"></div>
   <div class="stars"></div>
 
   <div class="container text-center">
@@ -86,17 +87,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <!-- Call to Action Buttons -->
       <div class="btn-container">
         <a href="https://www.jane.app" target="_blank" class="btn book-appointment pulse">Book Appointment</a>
-        
+        <a href="#services" class="btn explore-more float">Explore Services</a>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  /* Animated Background */
+  /* Night Sky Background */
   .hero-section {
     position: relative;
-    background: linear-gradient(-45deg, #0d6efd, #3d9df2, #82caff, #cde8ff);
+    background: linear-gradient(-45deg, #0a2a43, #0d6efd, #3d9df2, #82caff);
     background-size: 400% 400%;
     animation: gradientShift 10s ease infinite;
     height: 100vh;
@@ -109,6 +110,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     100% { background-position: 0% 50%; }
   }
 
+  /* Glowing Moon */
+  .moon {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #fff 40%, rgba(255, 255, 255, 0.3) 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    animation: moonGlow 5s infinite alternate ease-in-out;
+  }
+
+  @keyframes moonGlow {
+    0% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+    100% { transform: scale(1.05); box-shadow: 0 0 35px rgba(255, 255, 255, 1); }
+  }
+
   /* Stars */
   .stars {
     position: absolute;
@@ -119,32 +138,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     left: 0;
   }
 
-  .stars::after {
-    content: "";
+  .star {
     position: absolute;
-    width: 3px;
-    height: 3px;
     background: white;
     border-radius: 50%;
-    box-shadow: 50px 200px white, 150px 250px white, 300px 100px white, 450px 400px white,
-                600px 350px white, 700px 500px white, 800px 200px white, 950px 250px white;
-    animation: twinkle 2s infinite alternate;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    animation: twinkle 2s infinite alternate, floatStars 6s infinite ease-in-out;
   }
 
   @keyframes twinkle {
-    0% { opacity: 0.3; transform: scale(1); }
+    0% { opacity: 0.5; transform: scale(0.8); }
     100% { opacity: 1; transform: scale(1.2); }
   }
 
-  /* Floating Animation */
   @keyframes floatStars {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-5px); }
     100% { transform: translateY(0); }
-  }
-
-  .stars::after {
-    animation: floatStars 3s infinite linear;
   }
 
   /* Button Effects */
@@ -190,19 +200,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </style>
 
 <script>
-  // Dynamically create stars
+  // Dynamically create proper stars
   function createStars() {
     const starContainer = document.querySelector('.stars');
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 40; i++) {
       const star = document.createElement('div');
       star.classList.add('star');
-      star.style.position = 'absolute';
-      star.style.width = star.style.height = Math.random() * 4 + 'px';
+      const size = Math.random() * 6 + 3; // Bigger stars
+      star.style.width = star.style.height = `${size}px`;
       star.style.left = Math.random() * 100 + 'vw';
       star.style.top = Math.random() * 100 + 'vh';
-      star.style.background = 'white';
-      star.style.borderRadius = '50%';
-      star.style.animation = `twinkle ${Math.random() * 3 + 2}s infinite alternate`;
+      star.style.animationDuration = Math.random() * 3 + 2 + 's';
+      star.style.animationDelay = Math.random() * 3 + 's';
 
       starContainer.appendChild(star);
     }
